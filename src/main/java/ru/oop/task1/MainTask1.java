@@ -22,9 +22,7 @@ public class MainTask1 {
      */
     public void moveTo(Person person, Position destination) {
         new Car().moveTo(person, destination);
-        if (!person.getPosition().equals(destination)) {
-            person.walk(destination);
-        }
+        person.walk(destination);
         assert person.getPosition() == destination;
     }
 }
