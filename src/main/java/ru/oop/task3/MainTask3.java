@@ -26,9 +26,8 @@ public class MainTask3 {
      * @see Person
      * @see Position
      */
-    public void moveTo(Person person, Position destination) {
-        final List<Transport> allTransports = List.of(new Car(person), new Bus("43", person), new Bus("50", person));
-        for (Transport transport : allTransports) {
+    public void moveTo(Person person, List<Transport> transports, Position destination) {
+        for (Transport transport : transports) {
             person.walk(transport.getPosition());
             transport.moveTo(destination);
         }
