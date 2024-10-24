@@ -29,10 +29,8 @@ public class MainTask2 {
      * @see Position
      * @see Transport
      */
-    public void moveTo(Person person, Position destination) {
-        Transport car = new Car(person);
-        person.walk(car.getPosition());
-        car.moveTo(destination);
+    public void moveTo(Person person, Transport transport, Position destination) {
+        transport.moveTo(destination);
         person.walk(destination);
     }
 }
